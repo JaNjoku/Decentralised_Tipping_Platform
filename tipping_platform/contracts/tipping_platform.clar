@@ -90,7 +90,7 @@
 )
 
 (define-private (get-current-block-height)
-    stacks-block-height
+    block-height
 )
 
 ;;;;  Get default stats for new users
@@ -213,7 +213,7 @@
     (map-set tip-history {
         sender: sender,
         recipient: recipient,
-        timestamp: stacks-block-height,
+        timestamp: block-height,
     } {
         amount: amount,
         fee: fee,
@@ -387,7 +387,7 @@
     (map-get? tip-history {
         sender: sender,
         recipient: recipient,
-        timestamp: stacks-block-height,
+        timestamp: block-height,
     })
 )
 
